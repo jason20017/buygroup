@@ -1,13 +1,27 @@
+const cards = document.getElementsByClassName('card');
+const popup_container = document.querySelector('.popup_container');
+const popclose = document.querySelector('.pop_close');
 
-const card = document.querySelector('.card')
-const popup_container = document.querySelector('.popup_container')
-const popclose = document.querySelector('.pop_close')
+const openPopup = function () {
+    this.addEventListener('click', function () {
+        popup_container.classList.add('show');
+        document.body.classList.add('popup--open');
+    });
+};
 
-card.addEventListener('click', ()=>{
-    popup_container.classList.add('show');
+Array.from(cards).forEach(function (card) {
+    card.addEventListener('click', openPopup, true);
 });
 
-popclose.addEventListener('click', ()=>{
+// for (let index in cards) {
+//     const card = cards[index];
+//     console.log(card);
+//     // card.addEventListener('click', function () {
+//     //     popup_container.classList.toggle('show');
+//     // });
+// }
+
+popclose.addEventListener('click', function () {
     popup_container.classList.remove('show');
 });
 
