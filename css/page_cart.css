@@ -5,15 +5,20 @@
     box-sizing: border-box;
 }
 
+html,body{
+    height:100%;
+}
+
 header{
     width:100%;
-    height:130px;
+    height:100px;
     background:linear-gradient(45deg,#5a3f37, #2c7744);
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     position:fixed;
     top:0;
+    z-index: 5;
 }
 
 .logo img{
@@ -28,14 +33,14 @@ header{
 
 .header_middle{
     line-height: 2.3;
-    font-size: 40px;
+    font-size: 30px;
     color:cornsilk;
 }
 
 
 .header_left .logo{
-    width:100px;
-    height:100px;  
+    width:80px;
+    height: 50px;  
     position:relative;  
 }
 
@@ -93,4 +98,133 @@ header{
 .member_cart .member{
     margin-right:3rem;
 
+}
+/*================== Section ==================*/
+section{
+       margin-top:200px;
+       min-height: 100%;
+       font-size: 26px;
+}
+
+.section_list{
+    height:200px;
+    border:3px solid black ;
+    display:flex;
+    align-items: center;
+    position:relative;
+    margin:20px 0;
+}
+
+.section_photo{
+    width:200px;
+    position:absolute;
+    left:50px;
+}
+.section_photo img{
+    width:100%;
+    height:150px;
+}
+
+.section_product{
+    width:200px; /*給個寬*/
+    position:absolute;
+    left:350px;
+}
+
+.section_title{
+    padding-bottom:50px;
+}
+
+.section_count{
+    width:250px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_button{
+    width:90px;
+    display:flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+
+.section_price{
+    width:100%; /*給個寬*/
+    display: flex;
+    position: absolute;
+    left: 70%;
+}
+
+.section_price_unit{
+    margin-right:150px;
+}
+
+
+
+
+
+/*================== FOOTER 待編輯==================*/
+
+.footer_bg{
+    width:100%;
+    height:100px;
+    margin-bottom: 180px; 
+    background:linear-gradient(45deg,#5a3f37, #2c7744);
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:40px;
+    padding-right:40px;
+}
+
+.footer_container{
+    font-family: 'Poppins', sans-serif;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.footer_button{
+    width:200px;
+    margin-top:10px;
+    position:absolute;
+    right:500px;
+    border-radius:20px;
+    font-size: 32px;
+    padding: 5px;
+    cursor: pointer;
+    
+}
+
+.footer_button:hover{
+    background-color:rgba(223, 137, 111, 0.8);
+    transition:0.3s;
+}
+
+.footer_button:active{
+    transform:translate(0,5px);
+    transition:none;
+}
+
+.footer_allcost{
+    width:400px;
+    margin-top:10px;
+    background-color: rgb(212, 194, 194);
+    position:absolute;
+    right:50px;
+    border-radius: 5px;
+    font-size: 32px;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+.footer_copy{
+    font-size:16px;
+    text-align:center;
+    color:white;
+    margin-top:50px;
 }
